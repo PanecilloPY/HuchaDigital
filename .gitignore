@@ -1,0 +1,41 @@
+# Android Studio / IntelliJ
+*.iml
+/.idea/
+# Use /
+.gradle/
+# Use /
+/build/
+# Use /
+/app/build/
+
+# Local configuration
+/local.properties
+
+# User-specific (if any, like from previous .gitignore)
+.DS_Store # Common macOS file
+/captures # Android Studio captures
+.externalNativeBuild # Android NDK
+.cxx # Android NDK
+
+# Keys folder
+/key/
+
+# Build artifacts
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Other
+*.lock
+*.class
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+com_crashlytics_export_strings.xml # Crashlytics
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+*.hprof # Profiler
+*.snapshot # Profiler
+*.kreport # Kover reports

@@ -1,0 +1,33 @@
+<resources>
+    <!-- Nombre de la app -->
+    <string name="app_name">Hucha Digital</string>
+
+    <!-- Pantalla principal -->
+    <string name="main_title">Hucha Digital</string>
+    <string name="btn_add_money">Añadir dinero</string>
+    <string name="btn_remove_money">Quitar dinero</string>
+    <string name="btn_check_balance">Consultar dinero</string>
+    <string name="current_balance">Saldo actual:</string>
+
+    <!-- Pantalla de añadir/quitar -->
+    <string name="add_title">Añadir dinero</string>
+    <string name="remove_title">Quitar dinero</string>
+    <string name="you_have">Tienes: %1$d</string>
+    <string name="no_money_warning">No tienes billetes/monedas de %1$d€</string>
+
+    <!-- Pantalla de consulta -->
+    <string name="check_title">Consulta de dinero</string>
+    <string name="total_balance">Saldo total: %1$.2f€</string>
+    <string name="no_money_message">No tienes dinero en la hucha</string>
+
+    <!-- Valores monetarios -->
+    <string name="bill_50">Billete 50€</string>
+    <string name="bill_20">Billete 20€</string>
+    <string name="bill_10">Billete 10€</string>
+    <string name="bill_5">Billete 5€</string>
+    <string name="coin_2">Moneda 2€</string>
+    <string name="coin_1">Moneda 1€</string>
+    <string name="coin_50c">Moneda 50¢</string>
+    <string name="coin_20c">Moneda 20¢</string>
+    <string name="coin_10c">Moneda 10¢</string>
+</resources>
