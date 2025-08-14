@@ -21,7 +21,6 @@
 /key/
 
 # Build artifacts
-*.apk
 *.aab
 *.ap_
 *.dex
