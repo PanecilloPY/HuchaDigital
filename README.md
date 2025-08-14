@@ -15,6 +15,16 @@ Hucha Digital es una aplicación para Android que te ayuda a gestionar y realiza
 *   **(Próximamente):** Múltiples huchas para diferentes objetivos.
 *   **(Próximamente):** Recordatorios para ayudarte a mantener el hábito de ahorro.
 
+## 📸 Capturas de Pantalla
+
+| Menú Principal | Añadir Ahorro | Consultar Saldo |
+| --- | --- | --- |
+| ![Menú Principal](images/mainmenu.jpg) | ![Añadir Ahorro](images/add.jpg) | ![Consultar Saldo](images/checkbalance.jpg) |
+
+| Ingresar Contraseña | Eliminar Ahorro |
+| --- | --- |
+| ![Ingresar Contraseña](images/passw.jpg) | ![Eliminar Ahorro](images/remove.jpg) |
+
 ## 🚀 Instalación
 
 1.  **Instalar APK:**
@@ -34,11 +44,10 @@ Las contribuciones son bienvenidas. Si deseas contribuir:
 
 1.  Haz un Fork del Proyecto.
 2.  Crea tu Rama de Característica (`git checkout -b feature/NuevaCaracteristica`).
-3.  Confirma tus Cambios (`git commit -m '''Añade una NuevaCaracteristica Asombrosa'''`).
+3.  Confirma tus Cambios (`git commit -m 'Añade una NuevaCaracteristica Asombrosa'`).
 4.  Empuja a la Rama (`git push origin feature/NuevaCaracteristica`).
 5.  Abre una Pull Request.
 
 ## 📄 Licencia
 
 Distribuido bajo la Licencia MIT. Mire `LICENSE.txt`
-
