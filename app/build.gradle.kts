@@ -63,6 +63,8 @@ dependencies {
     
     implementation(libs.androidx.navigation.compose)
 
+    implementation("androidx.biometric:biometric-ktx:1.4.0-alpha02")
+    implementation("com.google.android.material:material:1.12.0") // Corrected version
     
     implementation(libs.androidx.constraintlayout) 
 }

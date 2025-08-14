@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Request permission for biometric authentication -->
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
 
     <application
@@ -32,10 +31,7 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.HuchaDigital">
-            <!-- Removed Launcher intent-filter from MainActivity -->
         </activity>
-
-        <!-- You might have other activities, keep them here -->
 
     </application>
 
