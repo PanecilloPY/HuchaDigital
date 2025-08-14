@@ -9,9 +9,9 @@ Hucha Digital es una aplicación para Android que te ayuda a gestionar y realiza
 ## ✨ Características
 
 *   **Registro de Ahorros:** Añade y visualiza fácilmente tus depósitos.
-*   **Establecimiento de Metas:** Define objetivos de ahorro y sigue tu progreso.
-*   **Historial de Transacciones:** Consulta todos tus movimientos de ahorro.
-*   **Visualización del Progreso:** Gráficos o indicadores visuales de cuánto has ahorrado para tus metas.
+*   **Privacidad:** Incluye la opción de iniciar sesión con contraseña y huella.
+*   **(Próximamente):** Consulta todos tus movimientos de ahorro
+*   **(Próximamente):** Gráficos o indicadores visuales de cuánto has ahorrado para tus metas.
 *   **(Próximamente):** Múltiples huchas para diferentes objetivos.
 *   **(Próximamente):** Recordatorios para ayudarte a mantener el hábito de ahorro.
 
