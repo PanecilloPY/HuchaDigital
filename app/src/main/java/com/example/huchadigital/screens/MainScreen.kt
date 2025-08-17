@@ -21,9 +21,9 @@ import com.example.huchadigital.model.Hucha
 @Composable
 fun MainScreen(navController: NavHostController, modifier: Modifier = Modifier) {
     Column(
-        modifier = modifier // Apply the modifier passed from MainActivity here
+        modifier = modifier
             .fillMaxSize()
-            .padding(horizontal = 16.dp, vertical = 16.dp), // Keep original internal padding
+            .padding(horizontal = 16.dp, vertical = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Spacer(Modifier.weight(0.3f))

@@ -52,7 +52,7 @@ object AppRoutes {
     const val CONSULT_SCREEN = "consult"
 }
 
-class MainActivity : AppCompatActivity() { // CHANGED
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Hucha.init(applicationContext)
@@ -168,7 +168,7 @@ fun MainAppContent(navController: NavHostController) {
                             onDismissRequest = { showMenu = false }
                         ) {
                             DropdownMenuItem(
-                                text = { Text("DEBUG: Borrar Contraseña") },
+                                text = { Text("Borrar Contraseña") },
                                 onClick = {
                                     showMenu = false
                                     AuthPrefs.clearPassword(context)

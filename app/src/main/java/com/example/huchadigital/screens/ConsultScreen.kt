@@ -33,29 +33,36 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.huchadigital.R
 import com.example.huchadigital.model.Hucha
+import com.example.huchadigital.theme.MoneyItemDef
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ConsultScreen(navController: NavHostController) {
-    val todosValores = listOf(1, 2, 5, 10, 20, 50, 100, 200)
-    val todasImagenes = listOf(
-        R.drawable.moneda_1, R.drawable.moneda_2,
-        R.drawable.billete_5, R.drawable.billete_10,
-        R.drawable.billete_20, R.drawable.billete_50,
-        R.drawable.billete_100, R.drawable.billete_200
-    )
 
-    val itemsExistentes = remember(Hucha.billetesMonedas.entries.toList()) {
-        todosValores.indices
-            .filter { index -> (Hucha.billetesMonedas[todosValores[index]] ?: 0) > 0 }
-            .map { index ->
-                val valor = todosValores[index]
-                Triple(
-                    valor,
-                    todasImagenes[index],
-                    Hucha.billetesMonedas[valor]!!
-                )
+    val todasDenominacionesConDetalles = remember {
+        listOf(
+            MoneyItemDef(0, R.drawable.moneda_50cent, "0.50€"),
+            MoneyItemDef(1, R.drawable.moneda_1, "1€"),
+            MoneyItemDef(2, R.drawable.moneda_2, "2€"),
+            MoneyItemDef(5, R.drawable.billete_5, "5€"),
+            MoneyItemDef(10, R.drawable.billete_10, "10€"),
+            MoneyItemDef(20, R.drawable.billete_20, "20€"),
+            MoneyItemDef(50, R.drawable.billete_50, "50€"),
+            MoneyItemDef(100, R.drawable.billete_100, "100€"),
+            MoneyItemDef(200, R.drawable.billete_200, "200€"),
+            MoneyItemDef(500, R.drawable.billete_500, "500€")
+        )
+    }
+
+    val itemsExistentes = remember(Hucha.billetesMonedas.toMap()) {
+        todasDenominacionesConDetalles.mapNotNull { moneyItemDef ->
+            val cantidad = Hucha.billetesMonedas[moneyItemDef.claveDenominacion] ?: 0
+            if (cantidad > 0) {
+                Pair(moneyItemDef, cantidad)
+            } else {
+                null
             }
+        }
     }
 
     Scaffold(
@@ -88,7 +95,10 @@ fun ConsultScreen(navController: NavHostController) {
             } else {
                 LazyVerticalGrid(columns = GridCells.Fixed(2), contentPadding = PaddingValues(8.dp)) {
                     items(itemsExistentes.size) { index ->
-                        val (valor, imagenId, cantidad) = itemsExistentes[index]
+                        val (moneyItem, cantidad) = itemsExistentes[index]
+                        val imagenId = moneyItem.imagenResId
+                        val textoDenominacion = moneyItem.displayText
+
                         Card(
                             modifier = Modifier
                                 .padding(8.dp)
@@ -101,12 +111,12 @@ fun ConsultScreen(navController: NavHostController) {
                             ) {
                                 Image(
                                     painter = painterResource(id = imagenId),
-                                    contentDescription = "Imagen de ${valor}€",
+                                    contentDescription = "Imagen de $textoDenominacion",
                                     modifier = Modifier.size(60.dp)
                                 )
                                 Spacer(Modifier.width(12.dp))
                                 Text(
-                                    "$cantidad x ${valor}€",
+                                    "$cantidad x $textoDenominacion",
                                     style = MaterialTheme.typography.titleMedium
                                 )
                             }

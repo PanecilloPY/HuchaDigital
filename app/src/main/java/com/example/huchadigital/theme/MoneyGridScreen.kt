@@ -48,6 +48,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.huchadigital.R
 import com.example.huchadigital.model.Hucha
+import kotlin.math.abs
 
 data class MoneyItemDef(val claveDenominacion: Int, val imagenResId: Int, val displayText: String)
 
@@ -68,15 +69,15 @@ fun MoneyGridScreen(navController: NavController, isAdding: Boolean) {
     val todasDenominacionesConDetalles = remember {
         listOf(
             MoneyItemDef(0, R.drawable.moneda_50cent, "0.50€"),
-            MoneyItemDef(1, R.drawable.moneda_1, "1.00€"),
-            MoneyItemDef(2, R.drawable.moneda_2, "2.00€"),
-            MoneyItemDef(5, R.drawable.billete_5, "5.00€"),
-            MoneyItemDef(10, R.drawable.billete_10, "10.00€"),
-            MoneyItemDef(20, R.drawable.billete_20, "20.00€"),
-            MoneyItemDef(50, R.drawable.billete_50, "50.00€"),
-            MoneyItemDef(100, R.drawable.billete_100, "100.00€"),
-            MoneyItemDef(200, R.drawable.billete_200, "200.00€"),
-            MoneyItemDef(500, R.drawable.billete_500, "500.00€")
+            MoneyItemDef(1, R.drawable.moneda_1, "1€"),
+            MoneyItemDef(2, R.drawable.moneda_2, "2€"),
+            MoneyItemDef(5, R.drawable.billete_5, "5€"),
+            MoneyItemDef(10, R.drawable.billete_10, "10€"),
+            MoneyItemDef(20, R.drawable.billete_20, "20€"),
+            MoneyItemDef(50, R.drawable.billete_50, "50€"),
+            MoneyItemDef(100, R.drawable.billete_100, "100€"),
+            MoneyItemDef(200, R.drawable.billete_200, "200€"),
+            MoneyItemDef(500, R.drawable.billete_500, "500€")
         )
     }
 
@@ -95,7 +96,7 @@ fun MoneyGridScreen(navController: NavController, isAdding: Boolean) {
             if (netChange > 0) {
                 repeat(netChange) { Hucha.agregar(denomination) }
             } else if (netChange < 0) {
-                repeat(Math.abs(netChange)) { Hucha.quitar(denomination) }
+                repeat(abs(netChange)) { Hucha.quitar(denomination) }
             }
         }
         pendingChanges.clear()

@@ -39,12 +39,13 @@ import com.example.huchadigital.model.Hucha
 fun ModifyScreen(navController: NavHostController, isAdding: Boolean) {
     val context = LocalContext.current
 
-    val todosValores = listOf(1, 2, 5, 10, 20, 50, 100, 200)
+    val todosValores = listOf(0, 1, 2, 5, 10, 20, 50, 100, 200)
     val todasImagenes = listOf(
-        R.drawable.moneda_1, R.drawable.moneda_2,
-        R.drawable.billete_5, R.drawable.billete_10,
-        R.drawable.billete_20, R.drawable.billete_50,
-        R.drawable.billete_100, R.drawable.billete_200
+        R.drawable.moneda_50cent,R.drawable.moneda_1,
+        R.drawable.moneda_2, R.drawable.billete_5,
+        R.drawable.billete_10, R.drawable.billete_20,
+        R.drawable.billete_50, R.drawable.billete_100,
+        R.drawable.billete_200, R.drawable.billete_500
     )
 
     val itemsAMostrar = remember(isAdding, Hucha.billetesMonedas.entries.toList()) {
