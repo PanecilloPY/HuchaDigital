@@ -9,11 +9,21 @@ Hucha Digital es una aplicación para Android que te ayuda a gestionar y realiza
 ## ✨ Características
 
 *   **Registro de Ahorros:** Añade y visualiza fácilmente tus depósitos.
-*   **Establecimiento de Metas:** Define objetivos de ahorro y sigue tu progreso.
-*   **Historial de Transacciones:** Consulta todos tus movimientos de ahorro.
-*   **Visualización del Progreso:** Gráficos o indicadores visuales de cuánto has ahorrado para tus metas.
+*   **Privacidad:** Incluye la opción de iniciar sesión con contraseña y huella.
+*   **(Próximamente):** Consulta todos tus movimientos de ahorro
+*   **(Próximamente):** Gráficos o indicadores visuales de cuánto has ahorrado para tus metas.
 *   **(Próximamente):** Múltiples huchas para diferentes objetivos.
 *   **(Próximamente):** Recordatorios para ayudarte a mantener el hábito de ahorro.
+
+## 📸 Capturas de Pantalla
+
+| Menú Principal | Añadir Ahorro | Consultar Saldo |
+| --- | --- | --- |
+| ![Menú Principal](images/mainmenu.jpg) | ![Añadir Ahorro](images/add.jpg) | ![Consultar Saldo](images/checkbalance.jpg) |
+
+| Ingresar Contraseña | Eliminar Ahorro |
+| --- | --- |
+| ![Ingresar Contraseña](images/passw.jpg) | ![Eliminar Ahorro](images/remove.jpg) |
 
 ## 🚀 Instalación
 
@@ -34,11 +44,10 @@ Las contribuciones son bienvenidas. Si deseas contribuir:
 
 1.  Haz un Fork del Proyecto.
 2.  Crea tu Rama de Característica (`git checkout -b feature/NuevaCaracteristica`).
-3.  Confirma tus Cambios (`git commit -m '''Añade una NuevaCaracteristica Asombrosa'''`).
+3.  Confirma tus Cambios (`git commit -m 'Añade una NuevaCaracteristica Asombrosa'`).
 4.  Empuja a la Rama (`git push origin feature/NuevaCaracteristica`).
 5.  Abre una Pull Request.
 
 ## 📄 Licencia
 
 Distribuido bajo la Licencia MIT. Mire `LICENSE.txt`
-
